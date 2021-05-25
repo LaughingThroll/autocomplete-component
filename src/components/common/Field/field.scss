@@ -1,0 +1,19 @@
+.field {
+  position: relative;
+}
+
+.field__input {
+  height: 40px;
+  padding: 0 16px;
+}
+
+.field__input::placeholder {
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-style: inherit;
+}
+
+.field__input:focus::placeholder {
+  opacity: 0;
+}
