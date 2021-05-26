@@ -1,4 +1,7 @@
 import { FieldProps } from './Field'
+import { DropdownProps } from './Dropdown'
 
 export { default as Field } from './Field'
-export type { FieldProps }
+export { default as Dropdown } from './Dropdown'
+
+export type { FieldProps, DropdownProps }

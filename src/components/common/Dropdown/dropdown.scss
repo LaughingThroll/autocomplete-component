@@ -1,0 +1,33 @@
+.dropdown {
+  min-width: 320px;
+  height: 320px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.dropdown__list {
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+}
+
+.dropdown__element {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color .3s ease;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #000;
+  }
+
+  &--active {
+    background-color: #880033;
+  }
+}
+
+.dropdown__element:hover {
+  background-color: #858585;
+}
+
+
+

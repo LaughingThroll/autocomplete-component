@@ -1,17 +1,13 @@
-import { fireEvent, render, RenderResult } from '@testing-library/react'
-import { act } from 'react-dom/test-utils'
+import { fireEvent, render } from '@testing-library/react'
 import Field, { FieldProps } from './'
 
 const setUp = (props: FieldProps) => render(<Field { ...props }/>)
 
 
 describe('Field render', () => {
-  beforeEach(() => {
-    
-  })
 
   it('default render', () => {
-    const props = { }
+    const props = { onChange: jest.fn() }
     const tree = setUp(props)
     const { container } = tree
     const field = container.querySelector('.field')
@@ -24,7 +20,7 @@ describe('Field render', () => {
   })
 
   it('render with classNames', () => {
-    const props = { classNames: 'autocomplete__field' }
+    const props = { onChange: jest.fn(), classNames: 'autocomplete__field' }
     const tree = setUp(props)
     const { container } = tree
     const autocompleteField = container.querySelector('.autocomplete__field')
@@ -37,7 +33,7 @@ describe('Field render', () => {
 
 describe('Field input', () => {
   it('should contains input attr', () => {
-    const props = { name: 'test-name' }
+    const props = { onChange: jest.fn(), name: 'test-name' }
     const tree = setUp(props)
     const { container } = tree
     const input = container.querySelector('[name="test-name"]')
@@ -53,7 +49,6 @@ describe('Field input', () => {
     const input = container.querySelector('input')
 
     input && fireEvent.change(input, { target: { value: 'a' } })
-
     
     expect(props.onChange).toHaveBeenCalled()
     expect(input?.value).toBe('a')

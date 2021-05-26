@@ -1,0 +1,13 @@
+.test-dropdown {
+  max-width: 450px;
+  width: 100%;
+
+  & ul {
+    background-color: #856595;
+  }
+
+  & li:hover {
+    background-color: #013654;
+  }
+}
+

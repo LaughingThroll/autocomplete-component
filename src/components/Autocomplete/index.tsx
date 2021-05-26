@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './autocomplete.module.scss'
 
 import { Field } from './../common'
+import { Dropdown } from './../common'
 
 export interface AutocompleteProps {
 
@@ -13,9 +14,7 @@ const Autocomplete = () => {
   return (
     <div className="autocomplete">
       <Field onChange={() => { }} classNames="autocomplete__field" />
-      <div className="autocomplete__dropdown dropdown">
-            
-      </div>
+      <Dropdown classNames="autocomplete__dropdown" elements={[{key: '1', value: 'text'}]} />
     </div>
   )
 }

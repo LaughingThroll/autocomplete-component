@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from 'react'
 import { Story, Meta } from '@storybook/react'
 
-import { Field, FieldProps } from './../components/common'
+import { Field, FieldProps } from '../../components/common'
 import './field.scss'
 
 export default {
